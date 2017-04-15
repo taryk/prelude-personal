@@ -1,4 +1,6 @@
 ;; Enable perspective mode
+(prelude-require-packages '(perspective))
+
 (persp-mode)
 
 (defmacro custom-persp (name &rest body)

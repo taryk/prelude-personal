@@ -2,6 +2,7 @@
 (setenv "LANG" "en_US.UTF-8")
 
 ;; Set up Perlbrew
+(prelude-require-packages '(perlbrew))
 (require 'perlbrew)
 
 (defconst perlbrew-init-file (expand-file-name "~/.perlbrew/init"))
