@@ -11,3 +11,6 @@
 
 ;; Disable an intrusive whitespace mode
 (setq prelude-whitespace nil)
+
+;; Disable prelude's guru mode (warnings on arrow keys, etc)
+(setq prelude-guru nil)
