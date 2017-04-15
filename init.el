@@ -8,3 +8,6 @@
 
 ;; Enable linum-mode only in prog-mode
 (add-hook 'prog-mode-hook 'linum-mode)
+
+;; Disable an intrusive whitespace mode
+(setq prelude-whitespace nil)
