@@ -1,0 +1,34 @@
+;;; Compiled snippets and support files for `perl-mode'
+;;; Snippet definitions:
+;;;
+(yas-define-snippets 'perl-mode
+                     '(("xwhen" "${2:expression} when ${1:smart_match};\n" "... when ..." nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/xwhen" nil nil)
+                       ("xuntil" "${1:expression} until ${2:condition};\n" "... until ..." nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/xuntil" nil nil)
+                       ("xfor" "${1:expression} for @${2:list_context};\n" "... for ..." nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/xfor" nil nil)
+                       ("with" "with '${1:roles}';\n" "with ..." nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/with" nil nil)
+                       ("when" "when (${1:smart_match}) {\n  $0\n}\n" "when ( ... ) { ... }" nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/when" nil nil)
+                       ("until" "until ($1) {\n    $0\n}\n" "until (...) { ... }" nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/until" nil nil)
+                       ("try" "try {\n    ${1:code}\n} catch {\n    $0\n};\n" "try { ... } catch { ... }" nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/try" nil nil)
+                       ("sw" "use strict;\nuse warnings;\n" "use strict; use warnings;" nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/sw" nil nil)
+                       ("subtype" "subtype '${1:subtype}',\n    as '${2:type}',\n    where { ${3:expr} },\n    message { \"${4:message}\" };\n$0" "subtype '...', as '...', where { ... }, message { ... };" nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/subtype" nil nil)
+                       ("redefine" "{ no warnings 'redefine';\n  *${1:original_sub} = sub {\n     $0\n  };\n}\n" "{ no warnings 'redefine'; ... }" nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/redefine" nil nil)
+                       ("packagei" "package ${1:`(let ((package-file (buffer-file-name)))\n               (if (string-match \"libs?\\\\\\/\\\\\\([a-zA-Z_0-9\\\\\\/]+\\\\\\)\\\\\\.pm$\" package-file)\n                 (replace-regexp-in-string \"/\" \"::\" (match-string 1 package-file))\n                  \"package_name\"))`};\n\nuse base qw[ ${1:$(if (string-match \"\\\\\\\\(.+\\\\\\\\)::[^:]+$\" yas/text)\n                      (match-string 1 yas/text)\n                      \"inherited_package_name\")} ];\n\nuse strict;\nuse warnings;\n\nour $VERSION = '${2:0.01}';\n\nsub new {\n  my \\$class = shift;\n  my \\$self  = \\$class->SUPER::new( @_ );\n  \\$self\n}\n\n$0\n\n1;\n" "package ...; use base ...;" nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/packagei" nil nil)
+                       ("package-default" "use strict;\nuse warnings;\n\nour $VERSION = '${2:0.01}';\n\nsub new {\n  my \\$class = shift;\n  my \\$self  = bless { @_ } => \\$class;\n  \\$self\n}\n\n$0\n\n1;\n" "package-default" nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/package-default" nil nil)
+                       ("package" "package ${1:`(let ((package-file (buffer-file-name)))\n               (if (string-match \"libs?\\\\\\/\\\\\\([a-zA-Z_0-9\\\\\\/]+\\\\\\)\\\\\\.pm$\" package-file)\n                 (replace-regexp-in-string \"/\" \"::\" (match-string 1 package-file))\n                  \"package_name\"))`};\n\n${0}\n\n1;" "package ..." nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/package" nil nil)
+                       ("map" "map { $0 } ${1:list_context};\n" "map { ... } ..." nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/map" nil nil)
+                       ("hasds" "\n=item $1\n\n=cut\n\nhas ${1:attribute} => (\n    is      => 'ro',\n    isa     => '${2:inherited_from}',\n    lazy    => 1,\n    default => sub {\n        my $self = shift;\n\n        my $$1 = $2->new;\n        $0\n\n        return $$1;\n    },\n);\n" "has attribute => ( ..., default => sub { my $self = shift; ... } );" nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/hasds" nil nil)
+                       ("hasd" "\n=item $1\n\n=cut\n\nhas ${1:attribute} => (\n    is      => 'ro',\n    isa     => '${2:inherited_from}',\n    lazy    => 1,\n    default => sub { $0 },\n);\n" "has attribute => ( ..., default => sub { ... } );" nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/hasd" nil nil)
+                       ("hasb" "\n=item $1\n\n=cut\n\nhas ${1:attribute} => (\n    is         => 'ro',\n    isa        => '${2:inherited_from}',\n    lazy_build => 1,\n);\n\nsub _build_$1 {\n    my $self = shift;\n\n    my $$1 = $2->new;\n    $0\n    return $$1;\n}\n" "has attribute => ( ... ); sub _build_attribute {  }" nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/hasb" nil nil)
+                       ("has" "\n=item $1\n\n=cut\n\nhas ${1:attribute} => (\n    $0\n);\n" "has attribute => ( ... );" nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/has" nil nil)
+                       ("grep" "grep { $0 } ${1:list_context};\n" "grep { ... } ..." nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/grep" nil nil)
+                       ("given" "given (${1:scalar_context}) {\n  when (${2:smart_match}) { $3 }\n  default { $4 }\n}\n" "given ( ... ) { ... }" nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/given" nil nil)
+                       ("extends" "extends '${1:name}'\n" "extends 'name'" nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/extends" nil nil)
+                       ("coerce" "coerce '${1:type}',\n    from '${2:from_type}',\n    via { ${3:expr} };\n$0\n" "coerce '...', from '...', via { expr };" nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/coerce" nil nil)
+                       ("before" "before ${1:name} => sub {\n    $0\n};\n" "before name => sub { ... }" nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/before" nil nil)
+                       ("around" "around ${1:name} => sub {\n    $0\n};\n" "around name => sub { ... }" nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/around" nil nil)
+                       ("after" "after ${1:name} => sub {\n    $0\n};\n" "after name => sub { ... }" nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/after" nil nil)
+                       ("@_" "my ($`(if (string-match \"/Chimera/API/\" buffer-file-name) \"class\" \"self\")`) = @_;" "@_" nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/@_" nil nil)
+                       ("%_" "my ($`(if (string-match \"/Chimera/API/\" buffer-file-name) \"class\" \"self\")`, %params) = @_;" "%_" nil nil nil "/Users/taras/.emacs.d/personal/snippets/perl-mode/%_" nil nil)))
+
+
+;;; Do not edit! File generated at Mon Apr 17 17:11:39 2017

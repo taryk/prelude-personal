@@ -1,0 +1,14 @@
+use strict;
+use warnings;
+
+our $VERSION = '${2:0.01}';
+
+sub new {
+  my \$class = shift;
+  my \$self  = bless { @_ } => \$class;
+  \$self
+}
+
+$0
+
+1;
