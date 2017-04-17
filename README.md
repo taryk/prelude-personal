@@ -3,6 +3,8 @@ My prelude customisations
 
 ## Installation
 
+You first need to install [Emacs Prelude](https://github.com/bbatsov/prelude#installation). Then you can clone the prelude personal repository:
+
     $ rm -rf $PATH_TO_PRELUDE/personal
     $ git clone --recursive git@github.com:taryk/prelude-personal.git $PATH_TO_PRELUDE/personal
 
@@ -33,7 +35,9 @@ The following Emacs packages get installed automatically on startup:
 * [perspective](https://stable.melpa.org/#/perspective)
 * [yasnippet](https://stable.melpa.org/#/yasnippet)
 
-## Keybindings
+## Keymap
+
+Default prelude keymap can be found [here](https://github.com/bbatsov/prelude#keymap).
 
 #### highlight-symbol
 
