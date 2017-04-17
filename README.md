@@ -8,6 +8,11 @@ You first need to install [Emacs Prelude](https://github.com/bbatsov/prelude#ins
     $ rm -rf $PATH_TO_PRELUDE/personal
     $ git clone --recursive git@github.com:taryk/prelude-personal.git $PATH_TO_PRELUDE/personal
 
+After that, you can create symbolic links for the following files:
+
+    $ ln -s $PATH_TO_PRELUDE/personal/modules/prelude-modules.el $PATH_TO_PRELUDE/prelude-modules.el
+    $ ln -s $PATH_TO_PRELUDE/personal/modules/prelude-pinned-packages.el $PATH_TO_PRELUDE/prelude-pinned-packages.el
+
 ## Dependencies
 
 ### A list of external programs used
