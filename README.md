@@ -31,7 +31,7 @@ The following Emacs packages get installed automatically on startup:
 * [perspective](https://stable.melpa.org/#/perspective)
 * [yasnippet](https://stable.melpa.org/#/yasnippet)
 
-### Keybindings
+## Keybindings
 
 #### highlight-symbol
 
