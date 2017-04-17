@@ -14,11 +14,13 @@ My prelude customisations
 * ctags
 * markdown
 * perlbrew
+* marked
 
 ### Install them
 
     $ brew install ctags ag markdown
     $ cpanm App::perlbrew
+    $ npm install -g marked
 
 ### Emacs packages
 
