@@ -1,0 +1,3 @@
+[submodule "helm-git-grep"]
+	path = helm-git-grep
+	url = git@github.com:PythonNut/helm-git-grep.git
