@@ -21,10 +21,17 @@
 (defun custom-perl-settings ()
   (require 'perltidy)
 
-  (setq cperl-indent-level 4)
+  (setq cperl-auto-newline nil)
+  (setq cperl-auto-newline-after-colon nil)
   (setq cperl-continued-statement-offset 0)
+  (setq cperl-highlight-variables-indiscriminately t)
+  (setq cperl-indent-level 4)
   (setq cperl-electric-linefeed nil)
   (setq cperl-electric-parens nil)
+  (setq cperl-extra-newline-before-brace nil)
+  (setq cperl-electric-keywords nil)
+  (setq cperl-indent-parens-as-block t)
+  (setq cperl-regexp-scan nil)
 
   ;; Configure cperl-mode
   (custom-set-faces
