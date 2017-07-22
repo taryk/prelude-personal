@@ -125,6 +125,7 @@
         (swift-mode . "melpa-stable")
         (thrift . "melpa-stable")
         (tuareg . "melpa-stable")
+        (tt-mode . "melpa-stable")
         (utop . "melpa-stable")
         (volatile-highlights . "melpa-stable")
         (web-mode . "melpa-stable")
