@@ -20,3 +20,6 @@
 (global-set-key (kbd "M-s-<right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "M-s-<down>") 'shrink-window)
 (global-set-key (kbd "M-s-<up>") 'enlarge-window)
+
+;; Turn smartparens-mode off, as it's inconvenient in non-lisp languages
+(add-hook 'prelude-prog-mode-hook (lambda () (smartparens-mode -1)) t)
